@@ -1,0 +1,277 @@
+/* Start of css based on system design  */
+
+/* Reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Colors */
+:root {
+  --color-primary: #4d96a9;
+  --color-primary-hover: #71c0d4;
+  --color-secondary: #855fb1;
+  --color-secondary-hover: #b18bdd;
+  --color-dark: #28283d;
+  --color-gray: #87879d;
+  --color-light-blue: #8fe3f9;
+  --color-light-purple: #d9b8ff;
+  --color-white: #fafafa;
+}
+
+/* Typography */
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;700&display=swap");
+
+h1 {
+  font-size: 64px;
+  font-weight: 900;
+  line-height: 64px;
+  color: var(--color-dark);
+  max-width: 445px;
+}
+
+h2 {
+  font-size: 40px;
+  font-weight: 900;
+  line-height: 44px;
+  color: var(--color-dark);
+  max-width: 445px;
+}
+
+p {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 26px;
+  color: var(--color-gray);
+}
+
+/* Buttons */
+button {
+  height: 58px;
+  font-weight: 500;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 26px;
+  border-radius: 29px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+button span {
+  color: var(--color-light-blue);
+}
+
+.button-primary {
+  padding: 16px 40px;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border: none;
+}
+
+.button-primary:hover {
+  background-color: var(--color-primary-hover);
+}
+
+.button-secondary {
+  padding: 10px 30px;
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+  border: none;
+}
+
+.button-secondary:hover {
+  background-color: var(--color-secondary-hover);
+}
+
+/* End of css based on system design  */
+
+body {
+  position: relative;
+  top: 0;
+  font-family: "Red Hat Display", sans-serif;
+  color: var(--color-dark);
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+header {
+  position: relative;
+  top: 0px;
+  padding-top: 82px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner {
+  position: relative;
+  margin: 61px 0 110px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* overflow: hidden; */
+  /* gap: 2rem; */
+  width: 100%;
+  height: 358px;
+}
+
+.banner img {
+  /* width: 100%;
+    height: 100%; */
+  max-width: 540px;
+  max-height: 310px;
+  object-fit: cover;
+}
+.banner img.left {
+  margin-left: -2rem;
+}
+.banner img.right {
+  margin-right: -2rem;
+}
+.banner-info {
+  align-self: flex-end;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  gap: 33px;
+  max-width: 540px;
+  max-height: 310px;
+}
+
+.banner-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+.divider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.divider .circle {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 1px solid rgba(128, 128, 128, 0.25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px; /* Ajuste la taille du texte si nécessaire */
+  background-color: var(--color-white);
+}
+
+.line {
+  width: 1px;
+  height: 84px;
+  background-color: rgba(128, 128, 128, 0.25);
+  z-index: -1;
+}
+
+.image-container {
+  max-width: 1110px;
+  margin: 64px auto 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+img {
+  max-width: 255px;
+  max-height: 242px;
+  object-fit: cover;
+}
+
+article {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 72px;
+}
+
+article .slogan {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 26px;
+  letter-spacing: 4px;
+  color: var(--color-primary);
+}
+
+article p {
+  max-width: 540px;
+}
+
+.part2 {
+  position: relative;
+  top: 28px;
+  z-index: 2;
+}
+
+footer {
+  position: relative;
+  top: 0px;
+  width: 100%;
+  min-height: 308px;
+
+  background-image: url(./assets/desktop/image-footer.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+footer::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(77, 151, 169, 0.9);
+  pointer-events: none;
+}
+
+footer section {
+  position: relative;
+  width: 100%;
+  min-height: 308px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 160px;
+
+  padding: 64px 0 0;
+  z-index: 2;
+}
+
+footer .footer__title {
+  max-width: 350px;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 44px;
+  color: var(--color-white);
+}
+
+footer .footer__text {
+  max-width: 350px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 26px;
+  color: var(--color-white);
+}
+
+footer .button-secondary span {
+        color: var(--color-light-purple) !important;
+
+}
